@@ -7,9 +7,9 @@
 </head>
 <body>
 
-  <form id="registrationForm" onsubmit="return validateForm()">
+  <form id="registrationForm" onsubmit="return validateForm(event)">
     <h2>Web Registration Form</h2>
-<h1> made a change<h1>
+
     <label>First Name:</label>
     <input type="text" name="firstName" required>
 
@@ -59,6 +59,9 @@
       <button type="reset" class="reset-btn">Reset</button>
     </div>
   </form>
+
+  <!-- ✅ Result Field -->
+  <div id="result"></div>
 
   <script src="script.js"></script>
 </body>

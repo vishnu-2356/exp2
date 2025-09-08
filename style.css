@@ -4,28 +4,32 @@ body {
   padding: 20px;
 }
 
-form {
-  background: white;
+form, #result {
+  background: #fff;
   padding: 20px;
   border-radius: 10px;
   max-width: 600px;
-  margin: auto;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-h2 {
+h2, h3 {
   text-align: center;
+  color: #333;
 }
 
 label {
   display: block;
-  margin-top: 10px;
+  margin-top: 12px;
+  font-weight: bold;
 }
 
 input, textarea, select {
   width: 100%;
   padding: 8px;
   margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   box-sizing: border-box;
 }
 
@@ -34,21 +38,29 @@ button {
   padding: 10px;
   width: 48%;
   border: none;
-  color: white;
-  cursor: pointer;
   border-radius: 5px;
   font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
-.submit-btn {
-  background-color: #4CAF50;
-}
+.submit-btn { background: #4CAF50; }
+.reset-btn { background: #f44336; }
 
-.reset-btn {
-  background-color: #f44336;
-}
+.submit-btn:hover { background: #45a049; }
+.reset-btn:hover { background: #e53935; }
 
 .btn-group {
   display: flex;
   justify-content: space-between;
+}
+
+#result {
+  display: none; /* hidden until form is submitted */
+  line-height: 1.6;
+}
+
+#result p {
+  margin: 8px 0;
 }
